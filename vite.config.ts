@@ -9,6 +9,12 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  preview: {
+    allowedHosts: [
+      "readify-library-management-system-1.onrender.com"  
+    ],
+    port: 10000 // optional, matches your start script
+  },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
@@ -16,3 +22,5 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+
+
